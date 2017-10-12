@@ -1,0 +1,1 @@
+使用Stream写入二进制数据.ENDEND.
