@@ -13,14 +13,14 @@ if (process.env.NODE_ENV === 'test') {
 } else {
     console.log(`Load ${defaultConfig}...`);
     config = require(defaultConfig);
-    try {
+   /* try {
         if (fs.statSync(overrideConfig).isFile()) {
             console.log(`Load ${overrideConfig}...`);
             config = Object.assign(config, require(overrideConfig));
         }
     } catch (err) {
         console.log(`Cannot load ${overrideConfig}.`);
-    }
+    }*/
 }
 
 module.exports = config;
