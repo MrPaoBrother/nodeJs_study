@@ -1,4 +1,4 @@
-const config = require('./config');
+/*const config = require('./config');
 
 const Sequelize = require('sequelize');
 
@@ -29,7 +29,7 @@ var Pets = sequelize.define('pets',{
     timestamps:false
 });
 
-var now = Date.now();
+var now = Date.now();*/
 //用await方式插入一条数据
 
 /*(async ()=>{
@@ -86,6 +86,26 @@ var now = Date.now();
     await xiaoge.destroy();
     console.log("删除成功...........");
 })();*/
+
+//const db = require('./init-db');
+
+/*const model = require('./model');
+var Users = model.users;*/
+/*var user = await Users.create({
+
+});*/
+
+const model = require('./model')
+var Pet = model.Pet;
+(async ()=>{
+    var cat = await Pet.create({
+        name:'猫' ,
+        gender: true ,
+        birth : '1995-06-04'
+    });
+    console.log("created:"+JSON.stringify(cat));
+})();
+
 
 
 
